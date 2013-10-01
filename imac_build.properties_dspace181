@@ -1,0 +1,75 @@
+##############################
+# Build properties
+##############################
+
+mvn.path=/opt/apache-maven-3.0.4/bin/mvn
+svn.path=/usr/bin/svn
+diff.path=/usr/bin/diff
+diff3.path=/usr/bin/diff3
+sed.path=/usr/bin/sed
+ant.path=/opt/local/bin/ant
+awk.path=/usr/bin/awk
+dirname.path=/usr/bin/dirname
+mkdir.path=/bin/mkdir
+xxdiff.path=/usr/local/bin/xxdiff
+curl.path=/opt/local/bin/curl
+imageMagick.convert.path=/opt/local/bin/convert
+clamscan.path=/opt/local/bin/clamscan
+expect.path=/usr/bin/expect
+
+db.commands.path=/opt/local/lib/postgresql83/bin
+
+##############################
+# DSpace properties
+##############################
+
+dspace.version=1.7.2
+
+dspace.dir=/opt/dspace_rjb
+dspace.host=dlib-fiaray.ucs.ed.ac.uk
+dspace.port=8080
+# NOTE: If the dspace port is 80, do *not* include the port in the SWORD url prefix
+dspace.sword.url.prefix=http://dlib-fiaray.ucs.ed.ac.uk:8080/sword
+dspace.default.webapp=xmlui
+dspace.name=DSpace Install
+
+dspace.db.type=postgres
+dspace.db.driver=org.postgresql.Driver
+dspace.db.name=dspace_rjb
+dspace.db.host=localhost
+dspace.db.port=5432
+dspace.db.url=jdbc:postgresql://${dspace.db.host}:${dspace.db.port}/${dspace.db.name}
+dspace.db.user=dspace_rjb
+dspace.db.pass=dspace_rjb
+
+dspace.smtp.server=internalmailrelay.ed.ac.uk
+dspace.smtp.port=25
+dspace.smtp.user=
+dspace.smtp.pass=
+
+dspace.mail.from=g.waller@ed.ac.uk
+dspace.mail.recipient=g.waller@ed.ac.uk
+dspace.mail.admin=g.waller@ed.ac.uk
+
+dspace.alert.recipient=g.waller@ed.ac.uk
+
+google.analytics.key=
+
+###############################
+# Jetty properties
+#
+###############################
+jetty.host=localhost
+jetty.port=8080
+jetty.webapp.dir=${dspace.dir}/webapps
+jetty.logs.dir=${basedir}/logs
+jetty.config.name=jetty.xml
+jetty.stop.port=8081
+jetty.stop.key=dspacejetty
+
+###############################
+# Cocoon properties
+#
+###############################
+cocoon.upload.dir=${dspace.dir}/cocoon-upload-dir
+

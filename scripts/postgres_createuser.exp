@@ -1,0 +1,12 @@
+set password ${dspace.db.pass}
+spawn ${db.commands.path}/createuser -U postgres -p ${dspace.db.port} -h ${dspace.db.host} -d -P ${dspace.db.user}
+expect "Enter password for new role: "
+send "${dspace.db.pass}\r"
+expect "Enter it again: "
+send "${dspace.db.pass}\r"
+expect "Shall the new role be a superuser? (y/n) "
+send "y\r"
+expect eof
+catch wait result
+exit [lindex $result 3]
+
